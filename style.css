@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    overflow: hidden;
+}
+
+.container{
+    margin: 50px auto;
+    width: 602px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    transition: background .3s;
+}
+
+.box:hover:not(.box-marcado){
+    background-color: rgba(0,0,0,.25);
+}
+
+.box:nth-child(1), .box:nth-child(2), .box:nth-child(3){
+    border-bottom: 1px solid #000;
+}
+
+.box:nth-child(4), .box:nth-child(5), .box:nth-child(6){
+    border-bottom: 1px solid #000;
+}
+
+.box:nth-child(1), .box:nth-child(4), .box:nth-child(7){
+    border-right: 1px solid #000;
+}
+
+.box:nth-child(2), .box:nth-child(5), .box:nth-child(8){
+    border-right: 1px solid #000;
+}
+
+/* ========================= */
+
+.jogadores{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 25px 0;
+    font-size: 3rem;
+}
+
+.jogadores div{
+    opacity: .1;
+    transition: opacity .5s;
+}
+
+.jogador-vez{
+    opacity: 1 !important;
+}
+
+.btn-reiniciar{
+    display: block;
+    margin: 0 auto;
+    padding: 15px 100px;
+    border: 3px solid #ddd;
+    border-bottom: 5px solid #ccc;
+    font-size: 1.5rem;
+    color: #666;
+}
+
+.btn-reiniciar:active{
+    border-bottom: 3px solid #ddd;
+    transform: translateY(2px);
+}
